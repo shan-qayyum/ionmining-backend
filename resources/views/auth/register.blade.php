@@ -10,7 +10,6 @@
     <!-- AOS animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <style>
-        /* (Paste your existing CSS here) */
         * {
             margin: 0;
             padding: 0;
@@ -74,7 +73,6 @@
         label {
             display: block;
             font-size: 0.9rem;
-            margin-bottom: 6px;
             font-weight: 600;
         }
 
@@ -98,13 +96,16 @@
             margin-bottom: 8px;
         }
 
+        /* UPDATED: flex alignment for terms checkbox + label */
         .terms {
+            display: flex;
+            align-items: center;
             font-size: 0.85rem;
             margin-bottom: 20px;
         }
 
         .terms input[type="checkbox"] {
-            margin-right: 8px;
+            margin-right: 0.5rem;
             accent-color: #8a3ffc;
         }
 
@@ -164,13 +165,11 @@
             @csrf
 
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter Your Name" value="{{ old('name') }}" required
-                autofocus />
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" value="{{ old('name') }}" required autofocus />
             @error('name') <div class="error">{{ $message }}</div> @enderror
 
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter Your Email Address"
-                value="{{ old('email') }}" required />
+            <input type="email" id="email" name="email" placeholder="Enter Your Email Address" value="{{ old('email') }}" required />
             @error('email') <div class="error">{{ $message }}</div> @enderror
 
             <label for="password">Password</label>
@@ -178,8 +177,7 @@
             @error('password') <div class="error">{{ $message }}</div> @enderror
 
             <label for="password_confirmation">Confirm Password</label>
-            <input type="password" id="password_confirmation" name="password_confirmation"
-                placeholder="Confirm Your Password" required />
+            <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Confirm Your Password" required />
             @error('password_confirmation') <div class="error">{{ $message }}</div> @enderror
 
             <div class="terms">
@@ -197,7 +195,9 @@
 
     <!-- AOS script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script> AOS.init(); </script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
