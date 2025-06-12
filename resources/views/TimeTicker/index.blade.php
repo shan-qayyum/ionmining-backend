@@ -225,7 +225,6 @@
     }
     
     /* Responsive Media Queries */
-    /* Adjust navigation for viewports below 1000px */
     @media (max-width: 1000px) {
       .nav-links,
       .auth-buttons {
@@ -234,14 +233,11 @@
       .menu-toggle {
         display: block;
       }
-      /* Adjust authentication button sizes */
       .auth-buttons a {
         padding: 6px 12px;
         font-size: 0.85rem;
       }
     }
-    
-    /* Mobile Menu Specific Adjustments */
     @media (max-width: 768px) {
       .logo img {
         width: 130px;
@@ -266,7 +262,6 @@
         font-size: 0.9rem;
       }
     }
-    
     @media (max-width: 480px) {
       .logo img {
         width: 110px;
@@ -292,7 +287,6 @@
       <div class="logo">
         <img src="Assets/default-monochrome.svg" alt="Logo">
       </div>
-      <!-- Desktop Navigation -->
       <div class="nav-links">
         <a href="home.html">Home</a>
         <a href="plans.html">Plans</a>
@@ -305,13 +299,9 @@
         <a href="signin.html" class="sign-in">Sign In</a>
         <a href="signup.html" class="sign-up">Sign Up</a>
       </div>
-      <!-- Mobile Navigation Toggle -->
       <div class="menu-toggle"><i class="fas fa-bars"></i></div>
     </div>
-    
-    <!-- Mobile Menu (Hamburger) -->
     <div class="mobile-menu">
-      <!-- Close Button -->
       <div class="menu-close" style="text-align: right; cursor: pointer; font-size: 1.5rem;">
         <i class="fas fa-times"></i>
       </div>
@@ -322,7 +312,6 @@
         <li><a href="#">About</a></li>
         <li><a href="#">FAQ</a></li>
         <li><a href="#">Contact</a></li>
-        <!-- Combined Mobile Auth Buttons in One Row -->
         <li class="auth-container">
           <a href="signin.html" class="sign-in">Sign In</a>
           <a href="signup.html" class="sign-up">Sign Up</a>
@@ -346,30 +335,38 @@
     const menuToggle = document.querySelector('.menu-toggle');
     const mobileMenu = document.querySelector('.mobile-menu');
     const menuClose = document.querySelector('.menu-close');
+    menuToggle.addEventListener('click', () => mobileMenu.classList.add('active'));
+    menuClose .addEventListener('click', () => mobileMenu.classList.remove('active'));
 
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
-    });
-    menuClose.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-    });
+    // Countdown Timer: target exactly 2 months from now
+    const now = new Date();
+    const targetDate = new Date(now);
+    targetDate.setMonth(targetDate.getMonth() + 2);
+    const countDownTime = targetDate.getTime();
 
-    // Countdown Timer Functionality
-    const countDownDate = new Date("May 1, 2025 15:37:25").getTime();
     const demoElement = document.getElementById("demo");
     if (demoElement) {
-      setInterval(() => {
-        const now = new Date().getTime();
-        const distance = countDownDate - now;
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const updateCountdown = () => {
+        const nowMs = new Date().getTime();
+        const distance = countDownTime - nowMs;
+
+        const days    = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours   = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        demoElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        demoElement.innerHTML = 
+          `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
         if (distance < 0) {
+          clearInterval(interval);
           demoElement.innerHTML = "EXPIRED";
         }
-      }, 1000);
+      };
+
+      // update immediately, then every second
+      updateCountdown();
+      const interval = setInterval(updateCountdown, 1000);
     }
   </script>
 </body>
