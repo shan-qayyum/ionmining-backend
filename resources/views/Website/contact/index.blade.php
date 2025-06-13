@@ -382,17 +382,17 @@
     <nav>
       <div class="menu-toggle"><i class="fas fa-bars"></i></div>
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="plans.html">Plans</a></li>
-        <li><a href="affliates.html">Affiliates</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="ContactUs.html">Contact</a></li>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('plans') }}">Plans</a></li>
+        <li><a href="{{ route('affiliates') }}">Affiliates</a></li>
+        <li><a href="{{ route('about') }}">About</a></li>
+        <li><a href="{{ route('FAQ') }}">FAQ</a></li>
+        <li><a href="{{ route('contact') }}">Contact</a></li>
       </ul>
     </nav>
     <div class="buttons">
-      <a href="signin.html"><button class="sign-in">Sign In</button></a>
-      <a href="signup.html"><button class="sign-up">Sign Up</button></a>
+      <a href="{{ route('login') }}"><button class="sign-in">Sign In</button></a>
+      <a href="{{ route('register') }}"><button class="sign-up">Sign Up</button></a>
     </div>
   </header>
   
@@ -401,7 +401,7 @@
     <section class="banner" data-aos="fade-up" data-aos-delay="150">
       <h1>Contact IONMINING PRO</h1>
       <p class="breadcrumb">
-        <a href="home.html">Home</a> › 
+        <a href="{{ route('home') }}">Home</a> › 
         <span>Contact</span>
       </p>
     </section>
@@ -446,17 +446,17 @@
       <div class="footer-section footer-links">
           <h3>Services</h3>
           <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="plans.html">Plans</a></li>
-              <li><a href="affliates.html">Affiliates</a></li>
-              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="{{ route('about') }}">About Us</a></li>
+              <li><a href="{{ route('plans') }}">Plans</a></li>
+              <li><a href="{{ route('affiliates') }}">Affiliates</a></li>
+              <li><a href="{{ route('FAQ') }}">FAQ</a></li>
           </ul>
       </div>
       <div class="footer-section footer-resources">
           <h3>Resources</h3>
           <ul>
-              <li><a href="#">Terms &amp; Conditions</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="{{ route('home') }}">Terms &amp; Conditions</a></li>
+              <li><a href="{{ route('home') }}">Privacy Policy</a></li>
           </ul>
       </div>
       <div class="footer-section footer-download">

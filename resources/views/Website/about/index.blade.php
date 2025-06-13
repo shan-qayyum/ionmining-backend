@@ -442,17 +442,17 @@
     <nav>
       <div class="menu-toggle"><i class="fas fa-bars"></i></div>
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="plans.html">Plans</a></li>
-        <li><a href="affliates.html">Affiliates</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="FAQ.html">FAQ</a></li>
-        <li><a href="ContactUs.html">Contact</a></li>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('plans') }}">Plans</a></li>
+        <li><a href="{{ route('affiliates') }}">Affiliates</a></li>
+        <li><a href="{{ route('about') }}">About</a></li>
+        <li><a href="{{ route('FAQ') }}">FAQ</a></li>
+        <li><a href="{{ route('contact') }}">Contact</a></li>
       </ul>
     </nav>
     <div class="buttons">
-      <a href="signin.html"><button class="sign-in">Sign In</button></a>
-      <a href="signup.html"><button class="sign-up">Sign Up</button></a>
+      <a href="{{ route('login') }}"><button class="sign-in">Sign In</button></a>
+      <a href="{{ route('register') }}"><button class="sign-up">Sign Up</button></a>
     </div>
   </header>
   
@@ -461,7 +461,7 @@
     <section class="banner" data-aos="fade-up" data-aos-delay="150">
       <h1>About IONMINING PRO</h1>
       <p class="breadcrumb">
-        <a href="home.html">Home</a> › 
+        <a href="{{ route('home') }}">Home</a> › 
         <span>About IONMINING PRO</span>
       </p>
     </section>
@@ -514,7 +514,7 @@
       <div class="content" data-aos="fade-right" data-aos-delay="250">
         <h2>Power Your Future with IONMINING PRO</h2>
         <p>Embrace the new era of cryptocurrency mining with our state-of-the-art cloud infrastructure. Experience reliability, security, and high returns with our innovative solutions.</p>
-        <a href="plans.html" class="btn">Get Started</a>
+        <a href="{{ route('plans') }}" class="btn">Get Started</a>
       </div>
       <div class="image-container" data-aos="fade-left" data-aos-delay="250">
         <img src="Assets/background_bitcoin.png" alt="Mining Machine">
@@ -532,17 +532,17 @@
       <div class="footer-section footer-links">
         <h3>Services</h3>
         <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="plans.html">Plans</a></li>
-          <li><a href="affliates.html">Affiliates</a></li>
-          <li><a href="FAQ.html">FAQ</a></li>
+          <li><a href="{{ route('about') }}">About Us</a></li>
+          <li><a href="{{ route('plans') }}">Plans</a></li>
+          <li><a href="{{ route('affiliates') }}">Affiliates</a></li>
+          <li><a href="{{ route('FAQ') }}">FAQ</a></li>
         </ul>
       </div>
       <div class="footer-section footer-resources">
         <h3>Resources</h3>
         <ul>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="{{ route('home') }}">Terms & Conditions</a></li>
+          <li><a href="{{ route('home') }}">Privacy Policy</a></li>
         </ul>
       </div>
       <div class="footer-section footer-download">

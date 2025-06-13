@@ -679,27 +679,27 @@
     <nav>
       <div class="menu-toggle"><i class="fas fa-bars"></i></div>
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="plans.html">Plans</a></li>
-        <li><a href="affliates.html">Affiliates</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="FAQ.html">FAQ</a></li>
-        <li><a href="ContactUs.html">Contact</a></li>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('plans') }}">Plans</a></li>
+        <li><a href="{{ route('affiliates') }}">Affiliates</a></li>
+        <li><a href="{{ route('about') }}">About</a></li>
+        <li><a href="{{ route('FAQ') }}">FAQ</a></li>
+        <li><a href="{{ route('contact') }}">Contact</a></li>
         <!-- Mobile-only Sign In/Up items -->
-        <li class="mobile-only"><a href="signin.html">Sign In</a></li>
-        <li class="mobile-only"><a href="signup.html">Sign Up</a></li>
+        <li class="mobile-only"><a href="{{ route('login') }}">Sign In</a></li>
+        <li class="mobile-only"><a href="{{ route('register') }}">Sign Up</a></li>
       </ul>
     </nav>
     <div class="buttons">
-      <a href="signin.html"><button class="sign-in">Sign In</button></a>
-      <a href="signup.html"><button class="sign-up">Sign Up</button></a>
+      <a href="{{ route('login') }}"><button class="sign-in">Sign In</button></a>
+      <a href="{{ route('register') }}"><button class="sign-up">Sign Up</button></a>
     </div>
   </header>
   <main class="content">
     <section class="banner" data-aos="fade-down">
       <h1>IONMINING PRO Affiliate | Cryptocurrency Cloud Mining Platform</h1>
       <p class="breadcrumb">
-        <a href="home.html">Home</a> ›
+        <a href="{{ route('home') }}">Home</a> ›
         <span>IONMINING PRO Affiliate | Cryptocurrency Cloud Mining Platform</span>
       </p>
     </section>
@@ -756,7 +756,7 @@
         </div>
       </div>
       <div class="join-now">
-       <a href="signin.html"><button>Join Now</button></a>
+       <a href="{{ route('login') }}"><button>Join Now</button></a>
       </div>
     </section>
     <!-- Enhanced Mining Section -->
@@ -765,7 +765,7 @@
         <h2>Start Your Mining Adventure with IONMINING PRO</h2>
         <p>Unlock the power of cloud mining with our state-of-the-art technology and dedicated support. Get started
           today and join the revolution!</p>
-        <a href="plans.html" class="btn">Get Started</a>
+        <a href="{{ route('plans') }}" class="btn">Get Started</a>
       </div>
       <div class="image-container" data-aos="fade-left">
         <img src="Assets/background_bitcoin.png" alt="Mining Machine" />
@@ -784,17 +784,17 @@
         <div class="footer-section footer-links">
           <h3>Services</h3>
           <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="plans.html">Plans</a></li>
-            <li><a href="affliates.html">Affiliates</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="{{ route('about') }}">About Us</a></li>
+            <li><a href="{{ route('plans') }}">Plans</a></li>
+            <li><a href="{{ route('affiliates') }}">Affiliates</a></li>
+            <li><a href="{{ route('FAQ') }}">FAQ</a></li>
           </ul>
         </div>
         <div class="footer-section footer-resources">
           <h3>Resources</h3>
           <ul>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="{{ route('home') }}">Terms & Conditions</a></li>
+            <li><a href="{{ route('home') }}">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="footer-section footer-download">
