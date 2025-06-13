@@ -288,16 +288,16 @@
         <img src="Assets/default-monochrome.svg" alt="Logo">
       </div>
       <div class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="plans.html">Plans</a>
-        <a href="affliates.html">Affiliates</a>
-        <a href="#">About</a>
-        <a href="#">FAQ</a>
-        <a href="#">Contact</a>
+        <a href="{{ route('home') }}">Home</a>
+        <a href="{{ route('plans') }}">Plans</a>
+        <a href="{{ route('affiliates') }}">Affiliates</a>
+        <a href="{{ route('about') }}">About</a>
+        <a href="{{ route('FAQ') }}">FAQ</a>
+        <a href="{{ route('contact') }}">Contact</a>
       </div>
       <div class="auth-buttons">
-        <a href="signin.html" class="sign-in">Sign In</a>
-        <a href="signup.html" class="sign-up">Sign Up</a>
+        <a href="{{ route('login') }}" class="sign-in">Sign In</a>
+        <a href="{{ route('register') }}" class="sign-up">Sign Up</a>
       </div>
       <div class="menu-toggle"><i class="fas fa-bars"></i></div>
     </div>
@@ -306,15 +306,15 @@
         <i class="fas fa-times"></i>
       </div>
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="plans.html">Plans</a></li>
-        <li><a href="affliates.html">Affiliates</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('plans') }}">Plans</a></li>
+        <li><a href="{{ route('affiliates') }}">Affiliates</a></li>
+        <li><a href="{{ route('about') }}">About</a></li>
+        <li><a href="{{ route('FAQ') }}">FAQ</a></li>
+        <li><a href="{{ route('contact') }}">Contact</a></li>
         <li class="auth-container">
-          <a href="signin.html" class="sign-in">Sign In</a>
-          <a href="signup.html" class="sign-up">Sign Up</a>
+          <a href="{{ route('login') }}" class="sign-in">Sign In</a>
+          <a href="{{ route('register') }}" class="sign-up">Sign Up</a>
         </li>
       </ul>
     </div>
@@ -326,7 +326,7 @@
       <h1>Coming Soon</h1>
       <hr />
       <p id="demo"></p>
-      <button class="home-button" onclick="window.location.href='home.html'">Go to Home</button>
+      <button class="home-button" onclick="window.location.href='{{ route('home') }}'">Go to Home</button>
     </div>
   </div>
 

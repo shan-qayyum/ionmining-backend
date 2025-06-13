@@ -161,7 +161,7 @@
 
 <body>
     <div class="container" data-aos="zoom-in" data-aos-duration="1000">
-        <button class="close-btn" onclick="window.location='{{ url('/') }}'">&#10005;</button>
+        <button class="close-btn" onclick="window.location='{{ url('/home') }}'">&#10005;</button>
         <div class="logo">
             <img src="{{ asset('Assets/default-monochrome.svg') }}" alt="BsvCloud logo" />
         </div>
